@@ -10,9 +10,9 @@ Disparo de campanhas de marketing por e-mails.
 
 ## Diagramas
 ### Diagrama Entidade Relacionamento:
-![Web 1](https://github.com/william-brito/be-jv-007/main/blob/main/diagramas/diagramaClasse.PNG)
+![Web 1](https://github.com/william-brito/be-jv-007/blob/main/diagramas/diagramaClasse.PNG)
 ### Diagrama de Classes:
-![Web 2](https://github.com/william-brito/be-jv-007/main/blob/main/diagramas/diagramaER.PNG)
+![Web 2](https://github.com/william-brito/be-jv-007/blob/main/diagramas/diagramaER.PNG)
 
 ### Clonar o Projeto
 
