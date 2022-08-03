@@ -1,4 +1,4 @@
-# Projeto do modulo Programaçao WEB II - LetsMail
+# Projeto do modulo "Programaçao WEB II" - LetsMail
 API com arquitetura RESTful. Utilizando Quarkus.
 
 ## Tema 
