@@ -9,7 +9,7 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.letscode</groupId>
-	<artifactId>be-jv-007</artifactId>
+	<artifactId>letsmail</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>be-jv-007</name>
 	<description>Demo project for Spring Boot</description>

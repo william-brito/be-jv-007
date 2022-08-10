@@ -1,13 +1,13 @@
-package com.letscode.bejv007;
+package com.letscode.letsmail;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class BeJv007Application {
+public class Aplicacao {
 
 	public static void main(String[] args) {
-		SpringApplication.run(BeJv007Application.class, args);
+		SpringApplication.run(Aplicacao.class, args);
 	}
 
 }
