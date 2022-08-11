@@ -1,4 +1,4 @@
-package com.letscode.bejv007.config;
+package com.letscode.letsmail.config;
 
 public class RestControllerExceptionAdvice {
 }

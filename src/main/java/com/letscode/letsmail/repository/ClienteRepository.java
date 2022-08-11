@@ -1,6 +1,6 @@
-package com.letscode.bejv007.repository;
+package com.letscode.letsmail.repository;
 
-import com.letscode.bejv007.model.Cliente;
+import com.letscode.letsmail.model.Cliente;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface ClienteRepository extends JpaRepository<Cliente, Long> {

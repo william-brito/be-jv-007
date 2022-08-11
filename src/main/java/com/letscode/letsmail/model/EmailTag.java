@@ -1,9 +1,7 @@
-package com.letscode.bejv007.model;
+package com.letscode.letsmail.model;
 
-import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.Setter;
-import lombok.ToString;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotBlank;

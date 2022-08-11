@@ -1,39 +1,40 @@
-package com.letscode.bejv007.model;
+package com.letscode.letsmail.model;
 
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
 
+import java.util.List;
+
 import javax.persistence.*;
+import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 
 @Getter
 @Setter
 @EqualsAndHashCode
+@ToString
 @Entity
-public class Email {
-
+public class Cliente {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     @NotNull(message = "Não pode ser NULL")
     @NotBlank(message = "Não pode ser VAZIO")
+    private String nome;
+
+    @NotNull(message = "Não pode ser NULL")
+    @NotBlank(message = "Não pode ser VAZIO")
+    private String cpf;
+
+    @NotNull(message = "Não pode ser NULL")
+    @NotBlank(message = "Não pode ser VAZIO")
+    @Email(message = "Email em formato inválido")
     private String email;
 
-    /*
-    @NotNull(message = "Não pode ser NULL")
-    @NotBlank(message = "Não pode ser VAZIO")
-    private String conteudo;
-
-*/
-    @NotNull(message = "Não pode ser NULL")
-    @NotBlank(message = "Não pode ser VAZIO")
-    @ManyToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name = "cliente_id", referencedColumnName = "id")
-    private Cliente cliente;
-
-
+    @ManyToMany(fetch = FetchType.LAZY)
+    private List<Tag> tags;
 }

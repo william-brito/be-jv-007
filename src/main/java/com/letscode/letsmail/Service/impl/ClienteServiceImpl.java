@@ -1,8 +1,8 @@
-package com.letscode.bejv007.Service.impl;
+package com.letscode.letsmail.Service.impl;
 
-import com.letscode.bejv007.Service.ClienteService;
-import com.letscode.bejv007.model.Cliente;
-import com.letscode.bejv007.repository.ClienteRepository;
+import com.letscode.letsmail.Service.ClienteService;
+import com.letscode.letsmail.model.Cliente;
+import com.letscode.letsmail.repository.ClienteRepository;
 import org.springframework.stereotype.Service;
 
 @Service
