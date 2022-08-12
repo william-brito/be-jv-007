@@ -1,5 +1,5 @@
 # Projeto do modulo "Programaçao WEB II" - LetsMail
-API com arquitetura RESTful. Utilizando Quarkus.
+API com arquitetura RESTful. Utilizando Spring boot.
 
 ## Tema 
 Disparo de campanhas de marketing por e-mails.
