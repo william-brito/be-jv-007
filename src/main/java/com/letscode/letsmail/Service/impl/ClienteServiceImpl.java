@@ -5,6 +5,8 @@ import com.letscode.letsmail.model.Cliente;
 import com.letscode.letsmail.repository.ClienteRepository;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class ClienteServiceImpl implements ClienteService {
 
@@ -17,5 +19,20 @@ public class ClienteServiceImpl implements ClienteService {
     @Override
     public Cliente salvar(Cliente cliente) {
         return clienteRepository.save(cliente);
+    }
+
+    @Override
+    public Cliente buscar(Long id) {
+        return null;
+    }
+
+    @Override
+    public List<Cliente> listar() {
+        return null;
+    }
+
+    @Override
+    public void excluir(Long id) {
+
     }
 }

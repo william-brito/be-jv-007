@@ -38,3 +38,4 @@ public class Cliente {
     @ManyToMany(fetch = FetchType.LAZY)
     private List<Tag> tags;
 }
+
