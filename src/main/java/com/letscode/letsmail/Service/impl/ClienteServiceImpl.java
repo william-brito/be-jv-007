@@ -23,12 +23,12 @@ public class ClienteServiceImpl implements ClienteService {
 
     @Override
     public Cliente buscar(Long id) {
-        return null;
+        return clienteRepository.getReferenceById(id);
     }
 
     @Override
     public List<Cliente> listar() {
-        return null;
+        return clienteRepository.findAll();
     }
 
     @Override

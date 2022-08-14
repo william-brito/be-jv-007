@@ -6,7 +6,7 @@ import java.util.List;
 
 public interface EmailService {
 
-    Email salvar(Email cliente);
+    Email salvar(Email email);
 
     Email buscar(Long id);
 

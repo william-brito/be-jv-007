@@ -20,19 +20,19 @@ public class EmailController {
     @Autowired
     private EmailService emailService;
 
-    @Operation(description = "Salvar um cliente na LetsMail")
+    @Operation(description = "Salvar um email na LetsMail")
     @PostMapping
     public ResponseEntity<Email> save(@RequestBody @Valid Email email) {
         return new ResponseEntity<Email>(emailService.salvar(email), HttpStatus.CREATED);
     }
 
-    @Operation(description = "Buscar um cliente")
+    @Operation(description = "Buscar um email")
     @GetMapping("/{id}")
     public ResponseEntity<Email> show(@RequestParam Long id) {
         return ResponseEntity.ok(emailService.buscar(id));
     }
 
-    @Operation(description = "Listar todos os clientes")
+    @Operation(description = "Listar todos os emails")
     @GetMapping
     public ResponseEntity<List<Email>> index() {
         return ResponseEntity.ok(emailService.listar());

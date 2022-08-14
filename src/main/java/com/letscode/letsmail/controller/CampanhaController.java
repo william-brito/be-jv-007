@@ -13,9 +13,6 @@ import org.springframework.web.bind.annotation.RestController;
 
 import javax.validation.Valid;
 
-// TODO:
-// Implementar as funções save, index e show com as chamadas no service
-
 @RestController
 @RequestMapping("/campanha")
 public class CampanhaController {

@@ -14,10 +14,6 @@ import org.springframework.web.bind.annotation.RestController;
 
 import javax.validation.Valid;
 
-// TODO:
-// Implementar as funções save, index e show com as chamadas no service
-// Vincular a criação da tag a uma campanha
-
 @RestController
 @RequestMapping("/tag")
 public class TagController {
@@ -25,7 +21,7 @@ public class TagController {
     @Autowired
     private TagService tagService; // Criar service de tag
 
-    @Operation(description = "Salvar uma campanha")
+    @Operation(description = "Salvar uma tag")
     @PostMapping
     public ResponseEntity<Tag> save(@RequestBody @Valid Tag tag) {
         return new ResponseEntity<Tag>(tagService.salvar(tag), HttpStatus.CREATED);
