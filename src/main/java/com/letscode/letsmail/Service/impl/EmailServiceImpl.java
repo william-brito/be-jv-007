@@ -11,7 +11,7 @@ import java.util.List;
 @Service
 public class EmailServiceImpl implements EmailService {
 
-    private EmailRepository emailRepository;
+    private final EmailRepository emailRepository;
 
     @Autowired
     public EmailServiceImpl(EmailRepository emailRepository) {

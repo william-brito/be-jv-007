@@ -11,7 +11,7 @@ import java.util.List;
 @Service
 public class CampanhaServiceImpl implements CampanhaService {
 
-    private CampanhaRepository campanhaRepository;
+    private final CampanhaRepository campanhaRepository;
 
     @Autowired
     public CampanhaServiceImpl(CampanhaRepository campanhaRepository) {
