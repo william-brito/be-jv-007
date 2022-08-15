@@ -27,7 +27,7 @@ public class EmailController {
     @Operation(description = "Salvar um email na LetsMail")
     @PostMapping
     public ResponseEntity<Email> save(@RequestBody @Valid Email email) {
-        return new ResponseEntity<Email>(emailService.salvar(email), HttpStatus.CREATED);
+        return ResponseEntity.status(HttpStatus.CREATED).body(emailService.salvar(email));
     }
 
     @Operation(description = "Buscar um email")

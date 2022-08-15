@@ -28,7 +28,7 @@ public class TagController {
     @Operation(description = "Salvar uma tag")
     @PostMapping
     public ResponseEntity<Tag> save(@RequestBody @Valid Tag tag) {
-        return new ResponseEntity<Tag>(tagService.salvar(tag), HttpStatus.CREATED);
+        return ResponseEntity.status(HttpStatus.CREATED).body(tagService.salvar(tag));
     }
 
 }

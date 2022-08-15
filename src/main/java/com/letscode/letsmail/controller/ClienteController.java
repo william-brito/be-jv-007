@@ -25,7 +25,7 @@ public class ClienteController {
     @Operation(description = "Salvar um cliente na LetsMail")
     @PostMapping
     public ResponseEntity<Cliente> save(@RequestBody @Valid Cliente cliente) {
-        return new ResponseEntity<Cliente>(clienteService.salvar(cliente), HttpStatus.CREATED);
+        return ResponseEntity.status(HttpStatus.CREATED).body(clienteService.salvar(cliente));
     }
 
     @Operation(description = "Buscar um cliente")

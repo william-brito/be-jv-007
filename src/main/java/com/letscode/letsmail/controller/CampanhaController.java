@@ -27,7 +27,7 @@ public class CampanhaController {
     @Operation(description = "Salvar uma campanha")
     @PostMapping
     public ResponseEntity<Campanha> save(@RequestBody @Valid Campanha campanha) {
-        return new ResponseEntity<Campanha>(campanhaService.salvar(campanha), HttpStatus.CREATED);
+        return ResponseEntity.status(HttpStatus.CREATED).body(campanhaService.salvar(campanha));
     }
 
 }
