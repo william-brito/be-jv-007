@@ -16,6 +16,7 @@ import javax.validation.Valid;
 
 @RestController
 @RequestMapping("/tag")
+@io.swagger.v3.oas.annotations.tags.Tag(name = "Tag", description = "Gerenciamento das tags")
 public class TagController {
 
     private final TagService tagService; // Criar service de tag

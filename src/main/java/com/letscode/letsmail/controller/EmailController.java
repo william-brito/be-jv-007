@@ -5,6 +5,7 @@ import com.letscode.letsmail.model.Campanha;
 import com.letscode.letsmail.model.Cliente;
 import com.letscode.letsmail.model.Email;
 import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -15,6 +16,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/email")
+@Tag(name = "Email", description = "Endpoints para utilização dos e-mails gerenciados")
 public class EmailController {
 
     private final EmailService emailService;
