@@ -4,13 +4,19 @@ import com.letscode.letsmail.Service.CampanhaService;
 import com.letscode.letsmail.model.Campanha;
 import com.letscode.letsmail.repository.CampanhaRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+@Service
 public class CampanhaServiceImpl implements CampanhaService {
 
+    private CampanhaRepository campanhaRepository;
+
     @Autowired
-    private  CampanhaRepository campanhaRepository;
+    public CampanhaServiceImpl(CampanhaRepository campanhaRepository) {
+        this.campanhaRepository = campanhaRepository;
+    }
 
     @Override
     public Campanha salvar(Campanha campanha) {

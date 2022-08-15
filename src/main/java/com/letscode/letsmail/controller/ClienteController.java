@@ -1,6 +1,7 @@
 package com.letscode.letsmail.controller;
 
 import io.swagger.v3.oas.annotations.Operation;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -15,6 +16,8 @@ import java.util.List;
 @RequestMapping("/cliente")
 public class ClienteController {
     private final ClienteService clienteService;
+
+    @Autowired
     public ClienteController(ClienteService clienteService) {
         this.clienteService = clienteService;
     }

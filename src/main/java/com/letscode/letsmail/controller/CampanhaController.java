@@ -17,8 +17,12 @@ import javax.validation.Valid;
 @RequestMapping("/campanha")
 public class CampanhaController {
 
+    private final CampanhaService campanhaService; // Criar service de campanha
+
     @Autowired
-    private CampanhaService campanhaService; // Criar service de campanha
+    public CampanhaController(CampanhaService campanhaService) {
+        this.campanhaService = campanhaService;
+    }
 
     @Operation(description = "Salvar uma campanha")
     @PostMapping

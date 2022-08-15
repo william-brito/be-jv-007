@@ -18,8 +18,12 @@ import javax.validation.Valid;
 @RequestMapping("/tag")
 public class TagController {
 
+    private final TagService tagService; // Criar service de tag
+
     @Autowired
-    private TagService tagService; // Criar service de tag
+    public TagController(TagService tagService) {
+        this.tagService = tagService;
+    }
 
     @Operation(description = "Salvar uma tag")
     @PostMapping

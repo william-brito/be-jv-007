@@ -17,8 +17,12 @@ import java.util.List;
 @RequestMapping("/email")
 public class EmailController {
 
+    private final EmailService emailService;
+
     @Autowired
-    private EmailService emailService;
+    public EmailController(EmailService emailService) {
+        this.emailService = emailService;
+    }
 
     @Operation(description = "Salvar um email na LetsMail")
     @PostMapping
