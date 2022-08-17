@@ -1,18 +1,15 @@
 package com.letscode.letsmail.controller;
 
 import com.letscode.letsmail.Service.TagService;
-import com.letscode.letsmail.model.Cliente;
 import com.letscode.letsmail.model.Tag;
 import io.swagger.v3.oas.annotations.Operation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
+import java.util.List;
 
 @RestController
 @RequestMapping("/tag")
@@ -30,6 +27,12 @@ public class TagController {
     @PostMapping
     public ResponseEntity<Tag> save(@RequestBody @Valid Tag tag) {
         return ResponseEntity.status(HttpStatus.CREATED).body(tagService.salvar(tag));
+    }
+
+    @Operation(description = "Lista todas as tags")
+    @GetMapping
+    public ResponseEntity<List<Tag>> listar() {
+        return ResponseEntity.status(HttpStatus.OK).body(tagService.listar());
     }
 
 }

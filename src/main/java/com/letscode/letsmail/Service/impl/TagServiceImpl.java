@@ -4,8 +4,9 @@ import com.letscode.letsmail.Service.TagService;
 import com.letscode.letsmail.model.Tag;
 import com.letscode.letsmail.repository.TagRepository;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
@@ -30,6 +31,8 @@ public class TagServiceImpl implements TagService {
     }
 
     @Override
+    @Transactional(readOnly = true)
+    @Cacheable(value = "tags", condition = "#pageable.pageSize>10")
     public List<Tag> listar() {
         return tagRepository.findAll();
     }

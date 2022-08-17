@@ -4,7 +4,9 @@ import com.letscode.letsmail.Service.EmailService;
 import com.letscode.letsmail.model.Email;
 import com.letscode.letsmail.repository.EmailRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
@@ -29,6 +31,8 @@ public class EmailServiceImpl implements EmailService {
     }
 
     @Override
+    @Transactional(readOnly = true)
+    @Cacheable(value = "emails", condition = "#pageable.pageSize>10")
     public List<Email> listar() {
         return emailRepository.findAll();
     }

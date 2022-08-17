@@ -1,8 +1,6 @@
 package com.letscode.letsmail.controller;
 
 import com.letscode.letsmail.Service.EmailService;
-import com.letscode.letsmail.model.Campanha;
-import com.letscode.letsmail.model.Cliente;
 import com.letscode.letsmail.model.Email;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
@@ -38,9 +36,9 @@ public class EmailController {
         return ResponseEntity.ok(emailService.buscar(id));
     }
 
-    @Operation(description = "Listar todos os emails")
+    @Operation(description = "Lista todos os emails")
     @GetMapping
-    public ResponseEntity<List<Email>> index() {
+    public ResponseEntity<List<Email>> listar() {
         return ResponseEntity.ok(emailService.listar());
     }
 }
